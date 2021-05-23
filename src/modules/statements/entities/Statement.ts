@@ -17,6 +17,7 @@ enum OperationType {
 
 @Entity('statements')
 export class Statement {
+  
   @PrimaryGeneratedColumn('uuid')
   id?: string;
 

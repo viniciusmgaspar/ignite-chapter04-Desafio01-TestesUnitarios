@@ -11,6 +11,7 @@ import { Statement } from '../../statements/entities/Statement';
 
 @Entity('users')
 export class User {
+  
   @PrimaryGeneratedColumn('uuid')
   id?: string;
 

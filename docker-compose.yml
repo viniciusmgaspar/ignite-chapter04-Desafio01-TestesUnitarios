@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+    database:
+        image: postgres
+        container_name: container_test
+        restart: always
+        ports:
+            - 5433:5432
+        environment:
+            - POSTGRES_USER=docker
+            - POSTGRES_PASSWORD=test
+            - POSTGRES_DB=test_DB
+        volumes:
+            - pgdata:/data/postgres
+    app:
+        build: .
+        container_name: app_test
+        restart: always
+        ports:
+            - 3334:3334
+        volumes:
+            - .:/usr/app
+        links:
+            - database
+        depends_on:
+            - database
+
+volumes:
+    pgdata:
+        driver: local

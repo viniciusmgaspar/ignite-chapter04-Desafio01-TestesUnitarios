@@ -14,10 +14,10 @@ interface IRequest {
   password: string;
 }
 
-//@injectable()
+@injectable()
 export class AuthenticateUserUseCase {
   constructor(
-   //@inject('UsersRepository')
+   @inject('UsersRepository')
     private usersRepository: IUsersRepository,
   ) {}
 
