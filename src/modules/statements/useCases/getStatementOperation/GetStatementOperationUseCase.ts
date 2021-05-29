@@ -28,7 +28,7 @@ export class GetStatementOperationUseCase {
 
     const statementOperation = await this.statementsRepository
       .findStatementOperation({ user_id, statement_id });
-0
+
       if(!statementOperation) {
         throw new GetStatementOperationError.StatementNotFound();
       }

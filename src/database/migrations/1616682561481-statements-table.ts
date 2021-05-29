@@ -20,6 +20,14 @@ export class accountsTable1616682561481 implements MigrationInterface {
           type: 'varchar',
         },
         {
+          name: 'sender_id',
+          type: 'uuid',
+        },
+        {
+          name: 'receiver_id',
+          type: 'uuid',
+        },
+        {
           name: 'amount',
           type: 'decimal',
           precision: 5,
@@ -28,7 +36,7 @@ export class accountsTable1616682561481 implements MigrationInterface {
         {
           name: 'type',
           type: 'enum',
-          enum: ['deposit', 'withdraw']
+          enum: ['deposit', 'withdraw', 'transfer']
         },
         {
           name: 'created_at',

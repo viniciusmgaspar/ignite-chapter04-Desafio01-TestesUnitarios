@@ -1,11 +1,9 @@
 {
   "username": "docker",
   "password": "test",
-
-  "name": "default",
   "type": "postgres",
   "host": "localhost",
-  "port": 5433,
+  "port": 5432,
   "database": "test_DB",
   "entities": [
     "./src/modules/**/entities/*.ts"

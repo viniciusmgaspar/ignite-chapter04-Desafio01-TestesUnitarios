@@ -5,6 +5,8 @@ Pick<
   Statement,
   'user_id' |
   'description' |
+  'receiver_id' |
+  'sender_id' |
   'amount' |
   'type'
 >

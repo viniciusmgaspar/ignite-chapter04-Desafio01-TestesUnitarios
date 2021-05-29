@@ -22,6 +22,7 @@ class CreateUserUseCase {
       throw new CreateUserError();
     }
 
+    console.log(name)
     const passwordHash = await hash(password, 8);
 
     const user = await this.usersRepository.create({
